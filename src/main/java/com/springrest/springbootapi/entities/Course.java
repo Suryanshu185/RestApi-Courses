@@ -1,7 +1,14 @@
 package com.springrest.springbootapi.entities;
 
+import jakarta.persistence.Entity;
+import jakarta.persistence.Id;
+import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
+
+@JsonIgnoreProperties(ignoreUnknown = true)
+@Entity
 public class Course {
 
+    @Id
     private long id;
     private String title;
     private String description;
